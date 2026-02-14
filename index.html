@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: #111;
+        color: white;
+        font-family:
+          Segoe UI,
+          sans-serif;
+        padding-top: 80px; /* navbar overlap fix */
+        height: 300vh;
+      }
+
+      /* ================= NAVBAR ================= */
+
+      .nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 70px;
+        background: #111;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 60px;
+        border-bottom: 1px solid #222;
+        z-index: 1000;
+      }
+
+      /* menu */
+      .nav ul {
+        display: flex;
+        gap: 30px;
+        list-style: none;
+      }
+
+      .nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 17px;
+        transition: 0.3s;
+      }
+
+      .nav a:hover {
+        color: cyan;
+      }
+
+      /* icon */
+      .nav i {
+        font-size: 20px;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid cyan;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .nav i:hover {
+        background: cyan;
+        color: black;
+      }
+
+      /* button */
+      .nav button {
+        height: 40px;
+        padding: 0 20px;
+        background: black;
+        color: cyan;
+        border: 1px solid cyan;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .nav button:hover {
+        background: cyan;
+        color: black;
+      }
+
+      /* ================= HERO ================= */
+
+      .main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 80px;
+        margin-top: 60px;
+      }
+
+      img {
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid cyan;
+      }
+
+      .about {
+        font-size: 28px;
+        line-height: 1.6;
+      }
+
+      .about button {
+        margin-top: 25px;
+        padding: 10px 20px;
+        font-size: 18px;
+        border: 1px solid cyan;
+        background: black;
+        color: cyan;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .about button:hover {
+        background: cyan;
+        color: black;
+      }
+      #whtsp {
+        height: 270px;
+        width: 150px;
+      }
+
+      /* floating contact button */
+
+      #btn2 {
+        position: fixed;
+        right: 30px;
+        bottom: 30px;
+        padding: 12px 22px;
+        border-radius: 30px;
+        border: 1px solid cyan;
+        background: black;
+        color: cyan;
+      }
+
+      /* ============ MOBILE ============ */
+
+      @media (max-width: 768px) {
+        .main {
+          flex-direction: column;
+          text-align: center;
+          gap: 40px;
+        }
+
+        .nav {
+          padding: 0 20px;
+        }
+
+        .nav ul {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Blogs</a></li>
+        <li><a href="">Services</a></li>
+        <li><a href="">Project</a></li>
+      </ul>
+      <i class="fa-solid fa-address-book"></i>
+      <button type="submit">Contact</button>
+    </div>
+    <div class="main">
+      <img src="ak.webp" />
+      <div class="about">
+        <h3>Code With <span style="color: cyan">Sudhanshu</span></h3>
+        <p>Passionate Python Developer</p>
+        <p>Expertise in Web Development</p>
+        <button>Download Cv</button>
+      </div>
+    </div>
+    <button id="btn2">Contact Me</button>
+
+    <i class="fa-brands fa-whatsapp" id="whtsp"></i>
+  </body>
+</html>
